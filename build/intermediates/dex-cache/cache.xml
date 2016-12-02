@@ -1,0 +1,167 @@
+<?xml version="1.0" encoding="utf-8"?>
+<items version="2" >
+
+    <item
+        is-multidex="false"
+        jar="/home/brst-pc93/StudioProjects/PunchTheTrump/app/build/intermediates/exploded-aar/com.android.support/support-v4/24.2.1/jars/classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="24.0.2"
+        sha1="d7c42c80f6509b9ea4db28ca7859ffae08ec5741">
+        <dex dex="/home/brst-pc93/StudioProjects/PunchTheTrump/app/build/intermediates/pre-dexed/debug/com.android.support-support-v4-24.2.1_07fbed6a95ff6c2c33120387bb509038c67e27e2.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/home/brst-pc93/StudioProjects/PunchTheTrump/app/build/intermediates/exploded-aar/com.android.support/support-media-compat/24.2.1/jars/classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="24.0.2"
+        sha1="09b462bbcb77650284bd6614f1a32f360ef369f8">
+        <dex dex="/home/brst-pc93/StudioProjects/PunchTheTrump/app/build/intermediates/pre-dexed/debug/com.android.support-support-media-compat-24.2.1_b5e3e26dbb82ee7254a78907e047ca97f8880a2f.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/home/brst-pc93/StudioProjects/PunchTheTrump/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/24.2.1/jars/classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="24.0.2"
+        sha1="43b2dba6b5a0b14527961b75329d0b90025f15ea">
+        <dex dex="/home/brst-pc93/StudioProjects/PunchTheTrump/app/build/intermediates/pre-dexed/debug/com.android.support-appcompat-v7-24.2.1_c19b52cf31b9bea7ebcd5fa3a9efc75b1de73c81.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/home/brst-pc93/StudioProjects/PunchTheTrump/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-basement/8.4.0/jars/classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="24.0.2"
+        sha1="8e673cdfadd8f2d98fdb2fda2285c30f6e449782">
+        <dex dex="/home/brst-pc93/StudioProjects/PunchTheTrump/app/build/intermediates/pre-dexed/debug/com.google.android.gms-play-services-basement-8.4.0_3e3294e4055aa4f7701715c42396dcc45d376e9e.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/home/brst-pc93/StudioProjects/PunchTheTrump/app/build/intermediates/exploded-aar/com.android.support/animated-vector-drawable/24.2.1/jars/classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="24.0.2"
+        sha1="94bc1dfb84dcc8b6f6f8f7cc726d7b2dd39c1574">
+        <dex dex="/home/brst-pc93/StudioProjects/PunchTheTrump/app/build/intermediates/pre-dexed/debug/com.android.support-animated-vector-drawable-24.2.1_073d0046992c8c01c271ed0f2016892dd5c62ce0.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/home/brst-pc93/Android/android-sdk-linux/extras/android/m2repository/com/android/support/support-annotations/24.2.1/support-annotations-24.2.1.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="24.0.2"
+        sha1="8de3aafecbdf98a61db6427f008f2d515bcd2544">
+        <dex dex="/home/brst-pc93/StudioProjects/PunchTheTrump/app/build/intermediates/pre-dexed/debug/support-annotations-24.2.1_31cd4c283ac129d5af92ab81064b07a0a852d97b.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/home/brst-pc93/StudioProjects/PunchTheTrump/app/build/intermediates/exploded-aar/com.android.support/support-core-utils/24.2.1/jars/libs/internal_impl-24.2.1.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="24.0.2"
+        sha1="935a969265b2a166b2d20415423f5f6e90fe16e0">
+        <dex dex="/home/brst-pc93/StudioProjects/PunchTheTrump/app/build/intermediates/pre-dexed/debug/internal_impl-24.2.1_ca5797910bbd759b535bc77a5c57cb8e5fb624d1.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/home/brst-pc93/StudioProjects/PunchTheTrump/app/build/intermediates/exploded-aar/com.android.support/support-fragment/24.2.1/jars/classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="24.0.2"
+        sha1="b9a1ac78ad7ef3abedc4a4b30cd92bcacb939d1f">
+        <dex dex="/home/brst-pc93/StudioProjects/PunchTheTrump/app/build/intermediates/pre-dexed/debug/com.android.support-support-fragment-24.2.1_d566fdc2c8fc007462e22ae4489b602d5a95f9d3.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/home/brst-pc93/StudioProjects/PunchTheTrump/app/build/intermediates/exploded-aar/com.android.support/support-compat/24.2.1/jars/libs/internal_impl-24.2.1.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="24.0.2"
+        sha1="7e4389bd133359a2ff88623ff1e4ff93d6e6f780">
+        <dex dex="/home/brst-pc93/StudioProjects/PunchTheTrump/app/build/intermediates/pre-dexed/debug/internal_impl-24.2.1_48da6fc7db3fa1f63c94c87d289d8d84c62977b8.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/home/brst-pc93/StudioProjects/PunchTheTrump/app/build/intermediates/exploded-aar/com.android.support/support-fragment/24.2.1/jars/libs/internal_impl-24.2.1.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="24.0.2"
+        sha1="5f64d657e838e8375135c0f6057a7ff8fab6a50e">
+        <dex dex="/home/brst-pc93/StudioProjects/PunchTheTrump/app/build/intermediates/pre-dexed/debug/internal_impl-24.2.1_b8b2e220b0de0913768bd28edc63a5802ce2515d.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/home/brst-pc93/StudioProjects/PunchTheTrump/app/build/intermediates/exploded-aar/com.android.support/support-media-compat/24.2.1/jars/libs/internal_impl-24.2.1.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="24.0.2"
+        sha1="fbf8da429efd5ad21e02e3e5ecaa1efc4167878d">
+        <dex dex="/home/brst-pc93/StudioProjects/PunchTheTrump/app/build/intermediates/pre-dexed/debug/internal_impl-24.2.1_92e89c56720f8c33c45d32c8e28cdcc31bc4532a.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/home/brst-pc93/StudioProjects/PunchTheTrump/app/build/intermediates/exploded-aar/com.android.support/support-core-ui/24.2.1/jars/classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="24.0.2"
+        sha1="e7f3132168957eefc46229fc32c3bd464642b71e">
+        <dex dex="/home/brst-pc93/StudioProjects/PunchTheTrump/app/build/intermediates/pre-dexed/debug/com.android.support-support-core-ui-24.2.1_af92cb7a31ba3db6845ab8741bff36a7db2ad0bd.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/home/brst-pc93/StudioProjects/PunchTheTrump/app/build/intermediates/exploded-aar/com.android.support/support-compat/24.2.1/jars/classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="24.0.2"
+        sha1="0ecb4b595fa0f0f8018a149ace3ea6525624f94e">
+        <dex dex="/home/brst-pc93/StudioProjects/PunchTheTrump/app/build/intermediates/pre-dexed/debug/com.android.support-support-compat-24.2.1_1387c78ea2c22a29bbfa3e5ebbeb1b08777f0471.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/home/brst-pc93/StudioProjects/PunchTheTrump/app/build/intermediates/exploded-aar/com.android.support/support-vector-drawable/24.2.1/jars/classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="24.0.2"
+        sha1="d5c731fc64c03dfe04d51134955b483551c35849">
+        <dex dex="/home/brst-pc93/StudioProjects/PunchTheTrump/app/build/intermediates/pre-dexed/debug/com.android.support-support-vector-drawable-24.2.1_05d6595f05b1637003a936de0f9546ff743f8b68.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/home/brst-pc93/StudioProjects/PunchTheTrump/app/build/intermediates/exploded-aar/com.android.support/support-core-ui/24.2.1/jars/libs/internal_impl-24.2.1.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="24.0.2"
+        sha1="867dad63c33388ff8c7644b236579355036d075f">
+        <dex dex="/home/brst-pc93/StudioProjects/PunchTheTrump/app/build/intermediates/pre-dexed/debug/internal_impl-24.2.1_2284e6ec24186acb38b311e268a03f0da5b77f4f.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/home/brst-pc93/.gradle/caches/modules-2/files-2.1/com.github.bumptech.glide/glide/3.7.0/9e9eeaf9948ee4d6c3ab354e8dc14368f16994a4/glide-3.7.0.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="24.0.2"
+        sha1="9e9eeaf9948ee4d6c3ab354e8dc14368f16994a4">
+        <dex dex="/home/brst-pc93/StudioProjects/PunchTheTrump/app/build/intermediates/pre-dexed/debug/glide-3.7.0_b8f1545cf4b95f20bcda99b464eb779524ba89e0.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/home/brst-pc93/StudioProjects/PunchTheTrump/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-ads/8.4.0/jars/classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="24.0.2"
+        sha1="b5e7892fb0708e792e0e933c4c0a0ca0ac7831fb">
+        <dex dex="/home/brst-pc93/StudioProjects/PunchTheTrump/app/build/intermediates/pre-dexed/debug/com.google.android.gms-play-services-ads-8.4.0_8b462d6db178913d3115e1e176772c8d990c4de5.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/home/brst-pc93/StudioProjects/PunchTheTrump/app/build/intermediates/exploded-aar/com.android.support/support-core-utils/24.2.1/jars/classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="24.0.2"
+        sha1="9c4c3bc902450c39ed54de170db4fb12aea20a35">
+        <dex dex="/home/brst-pc93/StudioProjects/PunchTheTrump/app/build/intermediates/pre-dexed/debug/com.android.support-support-core-utils-24.2.1_ee555efb4fca5fa903885b1acfee7e6659443d68.jar" />
+    </item>
+
+</items>
