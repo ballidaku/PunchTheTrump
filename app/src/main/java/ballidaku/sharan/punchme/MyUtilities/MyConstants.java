@@ -10,6 +10,7 @@ public class MyConstants
 
     public static final String LEFT = "left";
     public static final String RIGHT = "right";
+    public static final String TRUMP_PUNCH = "trump_punch";
     public static final String LEFT_DOWN = "left_down";
     public static final String RIGHT_DOWN = "right_down";
 

@@ -14,21 +14,28 @@ import android.widget.FrameLayout;
 import android.widget.ImageView;
 import android.widget.TextView;
 
-/*import com.google.android.gms.ads.AdListener;
-import com.google.android.gms.ads.AdRequest;
-import com.google.android.gms.ads.AdView;
-import com.google.android.gms.ads.InterstitialAd;*/
 import com.sharan.punchme.R;
+
+import java.util.Random;
 
 import ballidaku.sharan.punchme.MyUtilities.MyConstants;
 import ballidaku.sharan.punchme.MyUtilities.MyLibrary;
 import ballidaku.sharan.punchme.MyUtilities.MySharedPreferences;
 import ballidaku.sharan.punchme.MyUtilities.MyUtil;
 
+/*import com.google.android.gms.ads.AdListener;
+import com.google.android.gms.ads.AdRequest;
+import com.google.android.gms.ads.AdView;
+import com.google.android.gms.ads.InterstitialAd;*/
+
 public class MainActivity extends AppCompatActivity implements View.OnClickListener
 {
     ImageView imgv_main;
     ImageView imgv_background;
+
+    ImageView imgv_mainRight;
+    ImageView imgv_mainLeft;
+    ImageView imgv_trump_punch;
 
 
     TextView txtv_punch_count;
@@ -49,8 +56,6 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     String LRB;
 
 
-    ImageView imgv_mainRight;
-    ImageView imgv_mainLeft;
 
 
     String PHWB = MyConstants.PUNCH;
@@ -78,7 +83,9 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         // MySharedPreferences.getInstance().saveCoins(context, 301);
 
 
-        action2(R.drawable.trump_right);
+        actionBackground(R.drawable.trump_right);
+
+       // punchFromTrump();
 
 
 
@@ -120,12 +127,12 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         txtv_coin_count.setOnClickListener(this);
 
         imgv_main = (ImageView) findViewById(R.id.imgv_main);
-
         imgv_main.setVisibility(View.GONE);
 
 
         imgv_mainLeft = (ImageView) findViewById(R.id.imgv_mainLeft);
         imgv_mainRight = (ImageView) findViewById(R.id.imgv_mainRight);
+        imgv_trump_punch= (ImageView) findViewById(R.id.imgv_main);
 
 
         imageView = imgv_mainRight;
@@ -142,19 +149,13 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
             @Override
             public boolean onTouch(View view, MotionEvent e)
             {
-
                 Display display = ((WindowManager) getSystemService(Context.WINDOW_SERVICE)).getDefaultDisplay();
                 int viewWidth = display.getWidth();
                 int viewHeight = display.getHeight();
 
-
-//                Log.e(TAG+"XXXX", ""+e.getX()+"---------"+viewWidth*0.7+"---------"+viewWidth*0.3);
-
                 // RIGHT SIDE SCREEN
                 if (e.getX() > (viewWidth * 0.7))
                 {
-//                    Log.e(TAG, "RIGHT SIDE");
-
                     punch(MyConstants.RIGHT);
 
                     /*if(e.getY()> viewHeight*0.7){
@@ -166,8 +167,6 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                 // LEFT SIDE SCREEN
                 else if (e.getX() < (viewWidth * 0.3))
                 {
-//                    Log.e(TAG, "LEFT SIDE");
-
                     punch(MyConstants.LEFT);
                     /*if(e.getY()> viewHeight*0.7){
                         Log.e(TAG, "Left middle on screen  ");
@@ -177,29 +176,22 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                 }
                 else if (PHWB.equals(MyConstants.PUNCH))
                 {
-//                    Log.e(TAG+"YYYY", ""+e.getY()+"---------"+viewWidth*0.7+"------"+viewHeight*0.45);
                     if (e.getY() > viewHeight * 0.7)
                     {
-
                         if (e.getX() > (viewWidth / 2))
                         {
-                            //Log.e(TAG, "Right Hand");
                             punch(MyConstants.RIGHT_DOWN);
                         }
                         else
                         {
-//                           Log.e(TAG , "Left Hand");
                             punch(MyConstants.LEFT_DOWN);
                         }
-
                     }
                     else if (e.getY() > (viewHeight * 0.45))
                     {
-                        Log.e(TAG, "Middle down on screen ");
+                        //Log.e(TAG, "Middle down on screen ");
                     }
                 }
-
-
                 return false;
             }
         });
@@ -336,20 +328,15 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 
                 intervalTime = 1000;
                 PHWB = MyConstants.PUNCH;
-//                frameLayout_main.setBackgroundResource(R.drawable.trump_image);
-//                action(R.drawable.trump_right);
+                refreshBackground();
 
-                refresh2();
                 break;
 
             case R.id.imgv_round_baseball:
 
                 intervalTime = 600;
                 PHWB = MyConstants.BASEBALL;
-//                frameLayout_main.setBackgroundResource(R.drawable.trump_image_baseball);
-//                action(R.drawable.trump_move_baseball_left);
-
-                refresh2();
+                refreshBackground();
 
                 break;
 
@@ -365,10 +352,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 
     public void punch(String leftRightBottom)
     {
-
-
         LRB = leftRightBottom;
-
 
         if (PHWB.equals(MyConstants.PUNCH))
         {
@@ -387,33 +371,33 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
             punchCount += 4;
         }
 
-
         // Check punch is divisible by number, if divisible increase coin count
         boolean isDivisibleBy5 = punchCount % 500 == 0;
         if (isDivisibleBy5)
         {
             coinsCount += 1;
-
             MySharedPreferences.getInstance().saveCoins(context, coinsCount);
-
             txtv_coin_count.setText("" + coinsCount);
         }
 
         // Punch the character
-        //action(MyLibrary.getInstance().getGifOnHit(PHWB, punchCount, leftRightBottom));
-
-        //action(MyLibrary.getInstance().getGifOnHit2(PHWB, punchCount, leftRightBottom));
-
-        refresh1();
-
+        refresh();
 
         // after puch we have to show image and gif of trump movement
-
         CountDownTimer countDownTimer = new CountDownTimer(intervalTime, intervalTime);
         countDownTimer.start();
 
 
         // Sound Section
+        playPunchSound(leftRightBottom);
+
+        // Update the punch count
+        txtv_punch_count.setText("" + punchCount);
+    }
+
+
+    public void playPunchSound(String leftRightBottom)
+    {
         int sound;
         if (leftRightBottom.equals(MyConstants.RIGHT))
         {
@@ -423,20 +407,17 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         {
             sound = R.raw.left_hook;
         }
+       /* else if (leftRightBottom.equals(MyConstants.TRUMP_PUNCH))
+        {
+            sound = R.raw.trump_punch;
+        }*/
         else
         {
             sound = R.raw.upper_cut;
         }
 
         mp = MediaPlayer.create(this, sound);
-
         mp.start();
-
-
-        // Update the punch count
-        txtv_punch_count.setText("" + punchCount);
-
-
     }
 
 
@@ -449,80 +430,53 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         }
 
         @Override
-        public void onTick(long l)
-        {
-
-        }
+        public void onTick(long l) {}
 
         @Override
         public void onFinish()
         {
-            //action(MyLibrary.getInstance().getGifAfterHit(PHWB, punchCount, LRB, frameLayout_main));
-
-            // action(MyLibrary.getInstance().afterHit(PHWB, punchCount, LRB, frameLayout_main));
-
-            //  refresh2();
-
-            //imgv_main.setVisibility(View.GONE);
-
             imgv_mainLeft.setVisibility(View.GONE);
             imgv_mainRight.setVisibility(View.GONE);
             imgv_main.setVisibility(View.GONE);
-
+            imgv_trump_punch.setVisibility(View.GONE);
 
             if (!oldString.equals(MyLibrary.newString))
             {
                 oldString = MyLibrary.newString;
 
-                Log.e("REFRESH", "REFRESH");
-                refresh2();
+                refreshBackground();
             }
 
 
         }
     }
 
-    private void refresh1()
+    private void refresh()
     {
-        //action(MyLibrary.getInstance().getGifOnHit2(PHWB, punchCount, LRB));
-
         newConcept(LRB,MyLibrary.getInstance().getGifOnHit2(PHWB, punchCount, LRB));
-
-
-
-        /*if(LRB.equals(MyConstants.LEFT))
-        {
-            left();
-        }
-        else
-        {
-            right();
-        }*/
     }
 
-    private void refresh2()
+    private void refreshBackground()
     {
-
-        //action2(MyLibrary.getInstance().getGifAfterHit(PHWB, punchCount, LRB, frameLayout_main));
-
-        action2(MyLibrary.getInstance().getGifAfterHit2(PHWB, punchCount, LRB, frameLayout_main));
+        actionBackground(MyLibrary.getInstance().getGifAfterHit2(PHWB, punchCount, LRB, frameLayout_main));
     }
 
     // Show image in glide
-    public void action(int image)
+    public void punchFromTrump()
     {
         imgv_main.setVisibility(View.VISIBLE);
-        myUtil.showImageInGlide(context, imgv_main, image);
+        myUtil.showImageInGlide(context, imgv_trump_punch, R.drawable.punch_from_trump_right);
 
+        mp = MediaPlayer.create(this, R.raw.trump_punch);
+        mp.start();
     }
 
 
-    public void action2(int image)
+    public void actionBackground(int image)
     {
         myUtil.showImageInGlide(context, imgv_background, image);
 
     }
-
 
     String oldLR=MyConstants.RIGHT;
 
@@ -561,25 +515,34 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         imageView.setVisibility(View.VISIBLE);
         myUtil.showImageInGlide(context, imageView, image);
 
+
+
+        if(randomSlave == randomNum)
+        {
+            randomSlave=0;
+            random();
+
+            intervalTime = 500;
+            punchFromTrump();
+        }
+        randomSlave++;
+
     }
 
 
-
-
-/*    public void left()
+    int maximum =4;
+    int minimum =1;
+    int randomNum=0;
+    int randomSlave=0;
+    public void random()
     {
-        imgv_main.setVisibility(View.VISIBLE);
-        myUtil.showImageInGlide(context, imgv_main, R.drawable.trump_punch_left);
+        Random rn = new Random();
+        int range = maximum - minimum + 1;
+        randomNum =  rn.nextInt(range) + minimum;
+
+        Log.e("Random",""+randomNum);
+
     }
-
-    public void right()
-    {
-        imgv_main.setVisibility(View.VISIBLE);
-        myUtil.showImageInGlide(context, imgv_main, R.drawable.trump_punch_right);
-    }*/
-
-
-
 
 
 /*    //Called when leaving the activity
