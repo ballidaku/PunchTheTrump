@@ -30,15 +30,6 @@
     </item>
     <item
         is-multidex="false"
-        jar="/home/brst-pc93/StudioProjects/PunchTheTrump/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-basement/8.4.0/jars/classes.jar"
-        jumboMode="false"
-        optimize="true"
-        revision="24.0.2"
-        sha1="8e673cdfadd8f2d98fdb2fda2285c30f6e449782">
-        <dex dex="/home/brst-pc93/StudioProjects/PunchTheTrump/app/build/intermediates/pre-dexed/debug/com.google.android.gms-play-services-basement-8.4.0_3e3294e4055aa4f7701715c42396dcc45d376e9e.jar" />
-    </item>
-    <item
-        is-multidex="false"
         jar="/home/brst-pc93/StudioProjects/PunchTheTrump/app/build/intermediates/exploded-aar/com.android.support/animated-vector-drawable/24.2.1/jars/classes.jar"
         jumboMode="false"
         optimize="true"
@@ -144,15 +135,6 @@
         revision="24.0.2"
         sha1="9e9eeaf9948ee4d6c3ab354e8dc14368f16994a4">
         <dex dex="/home/brst-pc93/StudioProjects/PunchTheTrump/app/build/intermediates/pre-dexed/debug/glide-3.7.0_b8f1545cf4b95f20bcda99b464eb779524ba89e0.jar" />
-    </item>
-    <item
-        is-multidex="false"
-        jar="/home/brst-pc93/StudioProjects/PunchTheTrump/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-ads/8.4.0/jars/classes.jar"
-        jumboMode="false"
-        optimize="true"
-        revision="24.0.2"
-        sha1="b5e7892fb0708e792e0e933c4c0a0ca0ac7831fb">
-        <dex dex="/home/brst-pc93/StudioProjects/PunchTheTrump/app/build/intermediates/pre-dexed/debug/com.google.android.gms-play-services-ads-8.4.0_8b462d6db178913d3115e1e176772c8d990c4de5.jar" />
     </item>
     <item
         is-multidex="false"

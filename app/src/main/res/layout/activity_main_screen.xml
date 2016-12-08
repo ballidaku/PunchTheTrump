@@ -15,20 +15,51 @@
         android:scaleType="fitXY"/>
 
 
+
+
     <ImageView
-        android:id="@+id/imgv_main"
+        android:id="@+id/imgv_mainLeft"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:scaleType="fitXY"/>
 
-    <com.google.android.gms.ads.AdView
+
+    <ImageView
+        android:id="@+id/imgv_mainRight"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:scaleType="fitXY"/>
+
+
+
+    <ImageView
+        android:id="@+id/imgv_mainBottomLeft"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:scaleType="fitXY"/>
+
+
+    <ImageView
+        android:id="@+id/imgv_mainBottomRight"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:scaleType="fitXY"/>
+
+
+    <ImageView
+        android:id="@+id/imgv_trump_punch"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:scaleType="fitXY"/>
+
+ <!--   <com.google.android.gms.ads.AdView
         android:id="@+id/ad_view"
         android:layout_width="320dp"
         android:layout_height="50dp"
         android:layout_marginLeft="90dp"
         android:layout_marginTop="10dp"
         ads:adSize="BANNER"
-        ads:adUnitId="@string/banner_ad_unit_id" />
+        ads:adUnitId="@string/banner_ad_unit_id" />-->
 
 
 
