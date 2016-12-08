@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-          package="com.sharan.punchme">
+          package="faris.idea.punch">
 
     <uses-permission android:name="android.permission.INTERNET"/>
     <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE"/>
@@ -13,7 +13,7 @@
         android:hardwareAccelerated="false"
         android:theme="@style/NoActionBar">
         <activity
-            android:name="ballidaku.sharan.punchme.Splash"
+            android:name="faris.idea.punch.Splash"
             android:screenOrientation="sensorLandscape">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN"/>
@@ -22,13 +22,13 @@
             </intent-filter>
         </activity>
         <activity
-            android:name="ballidaku.sharan.punchme.MoreCoins"
+            android:name="faris.idea.punch.MoreCoins"
             android:screenOrientation="sensorLandscape">
         </activity>
-        <activity android:name="ballidaku.sharan.punchme.OtherWeapons"
+        <activity android:name="faris.idea.punch.OtherWeapons"
                   android:screenOrientation="sensorLandscape">
         </activity>
-        <activity android:name="ballidaku.sharan.punchme.MainActivity"
+        <activity android:name="faris.idea.punch.MainActivity"
                   android:screenOrientation="sensorLandscape">
         </activity>
 
