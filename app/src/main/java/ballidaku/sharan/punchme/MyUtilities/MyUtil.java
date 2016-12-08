@@ -29,6 +29,7 @@ public class MyUtil
                  .into(imageView);
         } catch (Exception e)
         {
+
             e.printStackTrace();
             Glide.with(context)
                  .load(image)

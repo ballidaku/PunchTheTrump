@@ -30,7 +30,8 @@ import com.google.android.gms.ads.InterstitialAd;*/
 
 public class MainActivity extends AppCompatActivity implements View.OnClickListener
 {
-    ImageView imgv_main;
+    ImageView imgv_mainBottomLeft;
+    ImageView imgv_mainBottomRight;
     ImageView imgv_background;
 
     ImageView imgv_mainRight;
@@ -61,7 +62,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     String PHWB = MyConstants.PUNCH;
 
 
-    int intervalTime = 1000;
+    int intervalTime = 700;
 
 //    InterstitialAd mInterstitialAd;
 //    private AdView mAdView;
@@ -126,13 +127,13 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         txtv_coin_count = (TextView) findViewById(R.id.txtv_coin_count);
         txtv_coin_count.setOnClickListener(this);
 
-        imgv_main = (ImageView) findViewById(R.id.imgv_main);
-        imgv_main.setVisibility(View.GONE);
+        imgv_mainBottomLeft = (ImageView) findViewById(R.id.imgv_mainBottomLeft);
+        imgv_mainBottomRight = (ImageView) findViewById(R.id.imgv_mainBottomRight);
 
 
         imgv_mainLeft = (ImageView) findViewById(R.id.imgv_mainLeft);
         imgv_mainRight = (ImageView) findViewById(R.id.imgv_mainRight);
-        imgv_trump_punch= (ImageView) findViewById(R.id.imgv_main);
+        imgv_trump_punch= (ImageView) findViewById(R.id.imgv_trump_punch);
 
 
         imageView = imgv_mainRight;
@@ -326,7 +327,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 
             case R.id.imgv_round_punch:
 
-                intervalTime = 1000;
+                intervalTime = 700;
                 PHWB = MyConstants.PUNCH;
                 refreshBackground();
 
@@ -384,6 +385,9 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         refresh();
 
         // after puch we have to show image and gif of trump movement
+
+
+
         CountDownTimer countDownTimer = new CountDownTimer(intervalTime, intervalTime);
         countDownTimer.start();
 
@@ -437,7 +441,8 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         {
             imgv_mainLeft.setVisibility(View.GONE);
             imgv_mainRight.setVisibility(View.GONE);
-            imgv_main.setVisibility(View.GONE);
+            imgv_mainBottomLeft.setVisibility(View.GONE);
+            imgv_mainBottomRight.setVisibility(View.GONE);
             imgv_trump_punch.setVisibility(View.GONE);
 
             if (!oldString.equals(MyLibrary.newString))
@@ -450,6 +455,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 
         }
     }
+
 
     private void refresh()
     {
@@ -464,7 +470,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     // Show image in glide
     public void punchFromTrump()
     {
-        imgv_main.setVisibility(View.VISIBLE);
+        imgv_trump_punch.setVisibility(View.VISIBLE);
         myUtil.showImageInGlide(context, imgv_trump_punch, R.drawable.punch_from_trump_right);
 
         mp = MediaPlayer.create(this, R.raw.trump_punch);
@@ -487,28 +493,28 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 
         if(!oldLR.equals(newLR))
         {
+            imgv_mainLeft.setVisibility(View.INVISIBLE);
+            imgv_mainRight.setVisibility(View.INVISIBLE);
+            imgv_mainBottomRight.setVisibility(View.INVISIBLE);
+            imgv_mainBottomLeft.setVisibility(View.INVISIBLE);
+
             if(newLR.equals(MyConstants.LEFT))
             {
-                imgv_mainRight.setVisibility(View.INVISIBLE);
-                imgv_main.setVisibility(View.INVISIBLE);
-
 
                 imageView=imgv_mainLeft;
 
             }
             else if(newLR.equals(MyConstants.RIGHT))
             {
-                imgv_mainLeft.setVisibility(View.INVISIBLE);
-                imgv_main.setVisibility(View.INVISIBLE);
-
                 imageView=imgv_mainRight;
             }
-            else
+            else if(newLR.equals(MyConstants.LEFT_DOWN))
             {
-                imgv_mainRight.setVisibility(View.INVISIBLE);
-                imgv_mainLeft.setVisibility(View.INVISIBLE);
-
-                imageView=imgv_main;
+                imageView=imgv_mainBottomLeft;
+            }
+            else if(newLR.equals(MyConstants.RIGHT_DOWN))
+            {
+                imageView=imgv_mainBottomRight;
             }
         }
 
@@ -522,7 +528,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
             randomSlave=0;
             random();
 
-            intervalTime = 500;
+            intervalTime = 600;
             punchFromTrump();
         }
         randomSlave++;

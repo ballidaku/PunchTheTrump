@@ -33,7 +33,14 @@
 
 
     <ImageView
-        android:id="@+id/imgv_main"
+        android:id="@+id/imgv_mainBottomLeft"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:scaleType="fitXY"/>
+
+
+    <ImageView
+        android:id="@+id/imgv_mainBottomRight"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:scaleType="fitXY"/>
